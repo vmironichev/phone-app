@@ -1,0 +1,2 @@
+rootProject.name = 'phone-app'
+include ":phone-catalog-api", ":order-api"

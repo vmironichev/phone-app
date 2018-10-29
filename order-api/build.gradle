@@ -1,0 +1,3 @@
+group = 'com.vmi.order'
+version = '0.0.1'
+sourceCompatibility = 10

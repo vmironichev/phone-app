@@ -1,3 +1,5 @@
+## Request example
+```
 curl -X POST \
   http://localhost:8092/order-api/rest/v1/order-information \
   -H 'Content-Type: application/json' \
@@ -19,9 +21,11 @@ curl -X POST \
 		"email": "vmironichev@gmail.com"
 	}
 }'
+```
 
 
-
+## Response
+```json
 {
     "customer": {
         "firstName": "Valeriy",
@@ -57,3 +61,4 @@ curl -X POST \
     "totalPrice": "8702.30",
     "currency": "USD"
 }
+```

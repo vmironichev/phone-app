@@ -82,7 +82,7 @@ public class OrderInformationController {
                 .build();
       } catch (HttpClientErrorException e) {
         String message = String.format("Error occurred during requesting phone-catalog API: %s ", e.getMessage());
-        throw new IllegalStateException(message);
+        throw new IllegalStateException(message, e);
       }
     };
   }

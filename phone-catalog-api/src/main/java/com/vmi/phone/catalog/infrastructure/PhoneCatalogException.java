@@ -1,4 +1,4 @@
-package com.smart.phone.catalog.infrastructure;
+package com.vmi.phone.catalog.infrastructure;
 
 /**
  * Created by vmironichev on 10/29/18.

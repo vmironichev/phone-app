@@ -1,6 +1,6 @@
-package com.smart.phone.catalog.infrastructure;
+package com.vmi.phone.catalog.infrastructure;
 
-import com.smart.phone.catalog.infrastructure.model.Phone;
+import com.vmi.phone.catalog.infrastructure.model.Phone;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.HashMap;
  * Created by vmironichev on 10/28/18.
  */
 @EnableJpaRepositories(
-        basePackages = "com.smart.phone.catalog.infrastructure.model",
+        basePackages = "com.vmi.phone.catalog.infrastructure.model",
         entityManagerFactoryRef = "phoneDbEntityManagerFactoryBean",
         transactionManagerRef = "phoneDbTransactionManager")
 @Configuration

@@ -1,4 +1,4 @@
-package com.smart.phone.catalog.infrastructure.model;
+package com.vmi.phone.catalog.infrastructure.model;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

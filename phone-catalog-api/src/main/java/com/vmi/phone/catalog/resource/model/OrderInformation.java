@@ -1,13 +1,14 @@
-package com.smart.phone.catalog.resource.model;
+package com.vmi.phone.catalog.resource.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
-import java.util.UUID;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import java.util.Set;
 
 /**
  * Created by vmironichev on 10/28/18.
@@ -16,18 +17,17 @@ import java.util.UUID;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class PhoneModel {
+public class OrderInformation {
+  @Valid
   @Getter
-  private UUID id;
+  private CustomerDetails customer;
   @Getter
-  private String name;
+  @Valid
+  @NotEmpty
+  private Set<OrderItem> items;
   @Getter
-  private String description;
-  @Getter
-  private String imageUrl;
-  @Setter
-  @Getter
-  private String price;
+  private String totalPrice;
   @Getter
   private String currency;
+
 }

@@ -1,9 +1,10 @@
-package com.smart.phone.catalog.resource;
+package com.vmi.phone.catalog.resource;
 
-import com.smart.phone.catalog.infrastructure.PhoneCatalogService;
-import com.smart.phone.catalog.resource.model.PhoneModel;
+import com.vmi.phone.catalog.infrastructure.PhoneCatalogService;
+import com.vmi.phone.catalog.resource.model.PhoneModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,18 +20,17 @@ import java.util.UUID;
 public class PhoneCatalogController {
 
   private static final String BASE_RESOURCE_PATH = "phone-catalog/rest/v1/phones";
-  private static final String APPLICATION_JSON = "application/json";
 
   @Autowired
   private PhoneCatalogService phoneCatalogService;
 
-  @GetMapping(path = BASE_RESOURCE_PATH, produces = APPLICATION_JSON)
+  @GetMapping(path = BASE_RESOURCE_PATH, produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<Set<PhoneModel>> loadPhoneModels() {
     var models = phoneCatalogService.loadPhoneModels();
     return new ResponseEntity<>(models, HttpStatus.OK);
   }
 
-  @GetMapping(path = BASE_RESOURCE_PATH + "/{id}", produces = APPLICATION_JSON)
+  @GetMapping(path = BASE_RESOURCE_PATH + "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<PhoneModel> findById(@PathVariable("id") UUID id) {
     var models = phoneCatalogService.findById(id);
     return new ResponseEntity<>(models, HttpStatus.OK);

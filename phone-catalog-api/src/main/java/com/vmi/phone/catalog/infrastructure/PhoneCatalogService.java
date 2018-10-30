@@ -1,8 +1,8 @@
-package com.smart.phone.catalog.infrastructure;
+package com.vmi.phone.catalog.infrastructure;
 
-import com.smart.phone.catalog.infrastructure.model.Phone;
-import com.smart.phone.catalog.infrastructure.model.PhonesRepository;
-import com.smart.phone.catalog.resource.model.PhoneModel;
+import com.vmi.phone.catalog.infrastructure.model.Phone;
+import com.vmi.phone.catalog.infrastructure.model.PhonesRepository;
+import com.vmi.phone.catalog.resource.model.PhoneModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

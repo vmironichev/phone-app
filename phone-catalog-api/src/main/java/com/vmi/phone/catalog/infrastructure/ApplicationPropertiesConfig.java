@@ -1,4 +1,4 @@
-package com.smart.phone.catalog.infrastructure;
+package com.vmi.phone.catalog.infrastructure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

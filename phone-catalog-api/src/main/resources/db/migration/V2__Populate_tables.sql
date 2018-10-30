@@ -26,4 +26,4 @@ values (uuid(), @price_uuid, 'https://cdn2.gsmarena.com/vv/pics/huawei/huawei-ma
 set @price_uuid = uuid();
 insert into price (uuid, amount, currency_code) values (@price_uuid, '0.00', 'USD');
 insert into phone (uuid, price_uuid, image_url, name, description)
-values (uuid(), @price_uuid, 'NA', 'Some new very fancy phone', 'Comming soon...');
+values (uuid(), @price_uuid, 'NA', 'Some new very fancy phone', 'Coming soon...');

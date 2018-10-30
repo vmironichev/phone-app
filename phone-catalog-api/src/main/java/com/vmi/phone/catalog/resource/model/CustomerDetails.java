@@ -1,4 +1,4 @@
-package com.smart.phone.catalog.resource.model;
+package com.vmi.phone.catalog.resource.model;
 
 import lombok.Getter;
 import lombok.ToString;

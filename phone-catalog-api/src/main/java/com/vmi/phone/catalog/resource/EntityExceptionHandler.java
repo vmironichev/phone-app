@@ -1,4 +1,4 @@
-package com.smart.phone.catalog.resource;
+package com.vmi.phone.catalog.resource;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

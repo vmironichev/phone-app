@@ -195,4 +195,5 @@ Once images started we are ready to use our APIs.
 ### TODO
 1. Use docker compose
 2. Extract resource representation classes into common library
-3. etc
+3. Add health checks
+4. etc

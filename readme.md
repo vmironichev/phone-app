@@ -72,7 +72,8 @@ Order API is intended to process order information received from API client, val
 
 Request
 ```
-curl -X POST http://localhost:8090/order-api/rest/v1/order-information
+curl -X POST http://localhost:8090/order-api/rest/v1/order-information \
+  -H 'Content-Type: application/json' \
   -d '{
     "items": [
         {

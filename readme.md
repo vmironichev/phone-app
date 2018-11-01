@@ -1,4 +1,4 @@
-# Java 10, Spring boot, Docker, Flyway, H2 DB Phone-App
+# Java 10, Spring boot, Docker, Flyway, H2 DB Phone-App sample application
 
 ## API Doc
 
@@ -193,10 +193,19 @@ docker run -p "8090:8090" -ti order-api:latest
 
 Once images started we are ready to use our APIs.
 
+### Improvements:
+    - in order to have reliable order processing system whe should configure service auto scaling. If we deploy our services to cloud, we need to take care about load balancing: define rules for scale in and scale out policies, that depending on CPU usage, memory consumption, time of the day (based on forecast about peak number of orders), etc.
+    - configure alerts based on unsuccessful error codes returned by elb, exception stack traces in logs, if present, etc (Cloud watch can be used in we use AWS for hosting)
+    - phone models caching can be a good idea
+    - add security, use existing solution (as an example use AWS API Gateway to configure auth on front of application load balancer), use SSL etc.
+    - perform load testing to have insights about application bandwidth
+    - support environments, sine current app works with one env, for real world use cases we need to have non prod env for testing
+    - for production use H2 should be changed to MySQL DB (AWS RDS or other instance)
+
+
 ### TODO
-1. Use docker compose
-2. Extract resource representation classes into common library
-3. Add health checks
-4. HATEAOS support
-5. API Result Pagination
-6. TBD
+1. Try to use docker compose
+2. Add health checks
+3. HATEOAS support
+4. API Result Pagination
+7. TBD

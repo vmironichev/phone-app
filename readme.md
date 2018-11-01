@@ -197,4 +197,6 @@ Once images started we are ready to use our APIs.
 1. Use docker compose
 2. Extract resource representation classes into common library
 3. Add health checks
-4. etc
+4. HATEAOS support
+5. API Result Pagination
+6. TBD

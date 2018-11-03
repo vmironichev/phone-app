@@ -1,10 +1,12 @@
 package com.vmi.phone.catalog.infrastructure;
 
+import com.vmi.phone.catalog.IsolatedTestDbConfiguration;
 import com.vmi.phone.catalog.resource.model.PhoneModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Objects;
@@ -17,8 +19,9 @@ import static org.assertj.core.api.Assertions.failBecauseExceptionWasNotThrown;
 /**
  * Created by vmironichev on 10/30/18.
  */
-@RunWith(SpringRunner.class)
 @SpringBootTest
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = IsolatedTestDbConfiguration.class)
 public class PhoneCatalogServiceTest {
 
   @Autowired

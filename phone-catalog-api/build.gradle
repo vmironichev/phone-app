@@ -3,6 +3,7 @@ version = '0.0.1'
 sourceCompatibility = 10
 
 dependencies {
+    compile project(':common-swagger')
     compile('com.h2database:h2')
     compile('javax.xml.bind:jaxb-api:2.3.0')
     implementation('org.flywaydb:flyway-core')

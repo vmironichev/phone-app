@@ -1,4 +1,4 @@
-# Java 10, Spring boot, Docker, Flyway, H2 DB Phone-App sample application
+# Java 10, Spring boot, Docker, Flyway, H2 DB and Swagger 2 Phone-App sample application
 
 ## API Doc
 
@@ -6,6 +6,11 @@ Phone-App project contains of sub projects:
 
 1) phone-catalog-api
 2) order-api
+
+### Swagger integration
+
+ - `http://${PHONE_CATALOG_HOST_IP}:8090/swagger-ui.html` - phone-catalog-api service
+ - `http://${ORDER_API_HOST_IP}:8091/swagger-ui.html` - order-api service
 
 ### Phone catalog API
 
@@ -40,7 +45,6 @@ Response, HTTP 1.1 200 OK "application/json;charset=UTF-8"
         "price": "0.00",
         "currency": "USD"
     }
-    ...
 ]
 ```
 
@@ -204,7 +208,7 @@ Once images started we are ready to use our APIs.
 
 
 ### TODO
-1. Try to use docker compose
+1. Use docker compose
 2. Add health checks
 3. HATEOAS support
 4. API Result Pagination

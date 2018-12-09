@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  phone-catalog-api:
+    ports:
+      - 8091:8091
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: phone-catalog-api
+        SERVICE_PORT: 8091
+  order-api:
+    ports:
+      - 8090:8090
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: order-api
+        SERVICE_PORT: 8090

@@ -171,6 +171,16 @@ Once services started, API are ready to use.
 
 In order to build Docker image, Docker should be installed on local machine. Ensure that dir is changed to phone-app root folder.
 
+### Docker-compose
+
+Easiest way build and start services locally is to use docker-compose tool that will build and start necessary images
+
+```
+docker-compose up
+```
+
+### Building images separately per each service
+
 #### Building image for phone-catalog-api
 
 ```
@@ -208,7 +218,7 @@ Once images started we are ready to use our APIs.
 
 
 ### TODO
-1. Use docker compose
+1. -Use docker compose-
 2. Add health checks
 3. HATEOAS support
 4. API Result Pagination

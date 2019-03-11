@@ -218,8 +218,8 @@ Once images started we are ready to use our APIs.
 
 
 ### TODO
-1. -Use docker compose-
+1. ~~Use docker compose~~
 2. Add health checks
 3. HATEOAS support
 4. API Result Pagination
-7. TBD
+5. ~~ircleci integration~~

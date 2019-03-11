@@ -23,6 +23,9 @@ jobs:
 
     steps:
       - checkout
+      # https://circleci.com/docs/2.0/docker-layer-caching/
+      - setup_remote_docker:
+          docker_layer_caching: true
 
       # Download and cache dependencies
       - restore_cache:

@@ -1,5 +1,7 @@
 # Java 10, Spring boot, Docker, Flyway, H2 DB and Swagger 2 Phone-App sample application
 
+[![CircleCI](https://circleci.com/gh/vmironichev/phone-app/tree/master.svg?style=svg)](https://circleci.com/gh/vmironichev/phone-app/tree/master)
+
 ## API Doc
 
 Phone-App project contains of sub projects:

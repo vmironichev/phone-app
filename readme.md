@@ -9,10 +9,64 @@ Phone-App project contains of sub projects:
 1) phone-catalog-api
 2) order-api
 
+### Actuator endpoints
+
+## Health
+
+- `http://${PHONE_CATALOG_HOST_IP}:8091/actuator/health`
+- `http://${ORDER_API_HOST_IP}:8090/actuator/health`
+
+```
+{
+   "status" : "UP",
+   "details" : {
+      "diskSpace" : {
+         "status" : "UP",
+         "details" : {
+            "total" : 500068036608,
+            "free" : 91716366336,
+            "threshold" : 10485760
+         }
+      },
+      "db" : {
+         "status" : "UP",
+         "details" : {
+            "hello" : 1,
+            "database" : "H2"
+         }
+      }
+   }
+}
+```
+
+## Info
+
+- `http://${PHONE_CATALOG_HOST_IP}:8091/actuator/info`
+- `http://${ORDER_API_HOST_IP}:8090/actuator/info`
+
+```
+{
+   "git" : {
+      "branch" : "master",
+      "commit" : {
+         "id" : "6694750",
+         "time" : "2019-03-11T11:50:29Z"
+      }
+   },
+   "build" : {
+      "group" : "com.vmi.phone.catalog",
+      "version" : "0.0.1",
+      "time" : "2019-03-22T09:57:46.468Z",
+      "name" : "phone-catalog-api",
+      "artifact" : "phone-catalog-api"
+   }
+}
+```
+
 ### Swagger integration
 
- - `http://${PHONE_CATALOG_HOST_IP}:8090/swagger-ui.html` - phone-catalog-api service
- - `http://${ORDER_API_HOST_IP}:8091/swagger-ui.html` - order-api service
+ - `http://${PHONE_CATALOG_HOST_IP}:8091/swagger-ui.html` - phone-catalog-api service
+ - `http://${ORDER_API_HOST_IP}:8090/swagger-ui.html` - order-api service
 
 ### Phone catalog API
 

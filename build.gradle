@@ -1,9 +1,11 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven {url "https://plugins.gradle.org/m2/"}
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("gradle.plugin.com.gorylenko.gradle-git-properties:gradle-git-properties:${gitInfoPluginVersion}")
     }
 }
 
@@ -13,13 +15,23 @@ subprojects {
     }
     apply plugin: 'java'
     apply plugin: 'idea'
-    apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'com.gorylenko.gradle-git-properties'
+
+    springBoot {
+        // This statement tells the Gradle Spring Boot plugin
+        // to generate a file
+        // build/resources/main/META-INF/build-info.properties
+        // that is picked up by Spring Boot to display
+        // via /info endpoint.
+        buildInfo ()
+    }
 
     dependencies {
         compile('javax.xml.bind:jaxb-api:2.3.0')
         compile('org.springframework.boot:spring-boot-starter-web')
+        compile('org.springframework.boot:spring-boot-starter-actuator')
         compileOnly('org.projectlombok:lombok:1.18.2')
         testImplementation('org.springframework.boot:spring-boot-starter-test')
   }

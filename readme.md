@@ -9,7 +9,6 @@ Phone-App project contains of sub projects:
 1) phone-catalog-api
 2) order-api
 
-<<<<<<< HEAD
 ### Actuator endpoints
 
 ## Health
